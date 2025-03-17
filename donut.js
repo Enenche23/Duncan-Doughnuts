@@ -28,7 +28,7 @@ function placeOrder() {
     else if(document.getElementById("time").value == "" || isNaN(document.getElementById("time").value))
         alert (" I'm Sorry, but you must provide the number of minutes until pick-up before submitting an order.");
 
-    
+    updateOrder()
     // submit order to sender ...
     form.submit();
 }

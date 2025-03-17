@@ -1,7 +1,7 @@
-<html >
+<!DOCTYPE html>
     <head>
         <title>Duncan's Just-In-Time Donuts</title>
-        <script type="text/javascript" src="donut.js" defer></script>   
+        <script type="text/javascript" src="donut.js" defer></script>  
         <link rel="stylesheet" href="donut.css">
     </head>
     <body >
@@ -13,13 +13,13 @@
                 <img src="Glazed_Doughnut.jpeg" alt="Glazed" id="glazed">
                 <img src="Cake_Doughnut.jpeg" alt="Cake" id="cake"> 
                 </div>  
-            <form name="orderform" action="donuts.php" method="post">
+                <form name="orderform" action="donuts.php" method="post" autocomplete="on">
                 <div class="field">
-                    Name: <input type="text" id="name" value=""/>
+                    Name: <input type="text" id="name" value="" autocomplete="name"/>
                 </div>
 
                 <div class="field">
-                    # of cake donuts: <input type="text" id="cakedonuts" name="cakedonuts" value="" onchange="updateOrder();"/>
+                    # of cake donuts: <input type="text" id="cakedonuts" name="cakedonuts" value="" onchange="updateOrder();" autocomplete="off"/>
                 </div>
 
                 <div class="field">
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="field">
-                    Minutes till pickup: <input type="text" id="time" value="" />
+                    Minutes till pickup: <input type="text" id="time" value="" autocomplete="off" />
                 </div>
 
                 <div class="field">
@@ -43,11 +43,10 @@
                 </div>
 
                 <div class="field">
-                    <input type="button" value="Place Order" onclick="placeOrder;" />
+                    <input type="button" value="Place Order" onclick="placeOrder(this.form);" />
                 </div>
-            </div>
-        </div>
             </form>
+            </div>
         </div>
     </body>
 </html>

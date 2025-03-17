@@ -1,66 +1,94 @@
+/* General Page Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 75px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8e8d1; /* Light beige bakery theme */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Frame Container */
+#frame {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
     text-align: center;
 }
 
+/* Headings */
 .heading {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #c76f38; /* Warm bakery brown */
+    margin-bottom: 10px;
 }
 
 .subheading {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    padding-bottom: 20px;
+    font-size: 16px;
+    color: #7a4e32;
+    margin-bottom: 20px;
 }
 
-
-.container {
-    display: flex;
-    text-align: center;
-    
-}
-
-form {
-    font-size: 50px;
-    text-align: center;
-    padding-left: 40px;
-    padding-top: 30px;
-}
-
+/* Image Container */
 #img {
-    gap: 20px;
-    padding-bottom: 30px;
-    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-#glazed, #cake {
-    height: 400px;
-    width: 400px;
+#img img {
+    width: 200px;  /* Adjust size */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid #c76f38;
 }
 
-button {
-    width: 350px;
-    height: 50px;
-    margin: 5px;
-    padding: 20px 20px;
-    font-size: 40px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-input {
-    width: 400px;
-    height: 50px;
-    font-size: 40px;
-    padding-left: 50px;
-}
-
-#name, #cakedonuts, #glazeddonuts, #time, #subtotal, #tax, #total {
-    padding-left: 700px;
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .field {
-    gap: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+input[type="button"] {
+    background: #c76f38;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background: #a55b2a;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    #frame {
+        width: 90%;
+    }
 }
